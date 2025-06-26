@@ -8,30 +8,39 @@
     <link href="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.snow.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/button.css') }}">
-    <title>Learn Language | get AI as your personal teacher</title>
+    <title>Language Learning Chat | AI Teacher</title>
 </head>
 
 <body>
-    <div id="toolbar">
-        <!-- Add font size dropdown -->
-        <select class="ql-size">
-            <option value="small"></option>
-            <!-- Note a missing, thus falsy value, is used to reset to default -->
-            <option selected></option>
-            <option value="large"></option>
-            <option value="huge"></option>
-        </select>
-        <!-- Add a bold button -->
-        <button class="ql-bold"></button>
-        <button class="ql-italic"></button>
-        <!-- <button class="button" type="submit">submit</button> -->
-        <span class="button">submit</span>
+    <div class="chat-container">
+        <!-- <div class="chat-header">
+            <h1>AI Language Teacher</h1>
+            <p>Practice your language skills with an AI tutor</p>
+        </div> -->
         
+        <div class="chat-messages" id="chat-messages">
+            <!-- Messages will appear here -->
+        </div>
+        
+        <div class="editor-container">
+            <div id="toolbar">
+                <select class="ql-size">
+                    <option value="small">Small</option>
+                    <option selected>Normal</option>
+                    <option value="large">Large</option>
+                    <option value="huge">Huge</option>
+                </select>
+                <button class="ql-bold" title="Bold"></button>
+                <button class="ql-italic" title="Italic"></button>
+                <button class="ql-underline" title="Underline"></button>
+                <button class="ql-list" value="bullet" title="Bullet List"></button>
+                <span class="button" id="send-button">Send</span>
+            </div>
+            
+            <div id="editor"></div>
+        </div>
     </div>
-    
-    <div class="editor">
 
-    </div>
     <script type="module" src="{{ url_for('static', filename='js/quill_editor.js') }}"></script>
     <script type="module" src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
