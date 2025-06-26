@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.snow.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/button.css') }}">
+    <title>Learn Language | get AI as your personal teacher</title>
+</head>
+
+<body>
+    <div id="toolbar">
+        <!-- Add font size dropdown -->
+        <select class="ql-size">
+            <option value="small"></option>
+            <!-- Note a missing, thus falsy value, is used to reset to default -->
+            <option selected></option>
+            <option value="large"></option>
+            <option value="huge"></option>
+        </select>
+        <!-- Add a bold button -->
+        <button class="ql-bold"></button>
+        <button class="ql-italic"></button>
+        <!-- <button class="button" type="submit">submit</button> -->
+        <span class="button">submit</span>
+        
+    </div>
+    
+    <div class="editor">
+
+    </div>
+    <script type="module" src="{{ url_for('static', filename='js/quill_editor.js') }}"></script>
+    <script type="module" src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

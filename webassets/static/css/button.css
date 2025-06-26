@@ -1,0 +1,90 @@
+.button {
+	display: inline-block;
+	padding: 0.5rem 1.25rem;
+	border-radius: 10rem;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1rem;
+	letter-spacing: 0.15rem;
+	transition: all 0.3s;
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+	margin: 0 auto;
+	cursor: pointer;
+	display: block;
+	width: fit-content;
+}
+
+/* Hover effect layers */
+.button:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #0cf;
+	border-radius: 10rem;
+	z-index: -2;
+}
+.button:before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0%;
+	height: 100%;
+	background-color: #008fb3;
+	transition: all 0.3s;
+	border-radius: 10rem;
+	z-index: -1;
+}
+.button:hover {
+	color: #fff;
+}
+.button:hover:before {
+	width: 100%;
+}
+
+/* Global reset (for presentation) */
+* {
+	font-family: Arial;
+	text-decoration: none;
+	font-size: 20px;
+}
+.container {
+	padding-top: 50px;
+	margin: 0 auto;
+	width: 100%;
+	text-align: center;
+}
+
+/* Phones (<= 600px) */
+@media only screen and (max-width: 600px) {
+	.button {
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 0.9rem;
+	}
+}
+
+/* Tablets (601px to 1024px) */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+	.button {
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 1rem;
+	}
+}
+
+/* Laptops and Desktops (>= 1025px) */
+@media only screen and (min-width: 1025px) {
+	.button {
+		margin-left: auto;
+		margin-right: 5vw; /* Align slightly right */
+	}
+}
+
+
+ 
