@@ -15,7 +15,7 @@ this an ai based student teacher application to learn something based on a roadm
 
 - put your learning roadmap in
   ```bash
-  asset/.prompt/(put_your_guide_line_file)
+  asset/.prompt/learning_roadmap.md
   ```
 - then check if you have `python` in your machine _like:_\
    **type in teminal:**

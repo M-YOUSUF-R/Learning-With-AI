@@ -8,7 +8,7 @@ load_dotenv()
 gemini_api_key = os.getenv("API_KEY")
 
 client = genai.Client(api_key=gemini_api_key)
-"asset/.prompt/arabic_roadmap"
+
 def getLearningRoadMapFromFile(prompt_file_path:str)->str:
     try:
         with open(prompt_file_path,'r',encoding='utf8') as prompt:
@@ -61,7 +61,7 @@ def aiResponse(input_text:str=None,chat_history:dict=None)->'generator':
 
             You must behave consistently across sessions and ensure continuity of learning without manual intervention.
         """
-        learning_road_map = getLearningRoadMapFromFile("asset/.prompt/arabic_roadmap.md")
+        learning_road_map = getLearningRoadMapFromFile("asset/.prompt/learning_roadmap.md")
         full_content = [
             prompt,
             f"Here is the learning roadmap:\n{learning_road_map}",
