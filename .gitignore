@@ -1,0 +1,12 @@
+__pycache__
+.venv
+.env
+chats/chat_history.json
+chats
+chat_history.json
+credentials
+credentials.json
+test
+tokens
+
+.gitignore
