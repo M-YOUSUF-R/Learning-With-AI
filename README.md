@@ -19,18 +19,40 @@ this an ai based student teacher application to learn something based on a roadm
   ```
 - then check if you have `python` in your machine _like:_\
    **type in teminal:**
-  `bash
-python --version
-`
+  ```bash
+    python --version
+  ```
+  or
+  ```bash
+  python3 --version
+  ```
   **Or** _download_ it from: [downlaod](https://www.python.org/ftp/python/3.13.5/Python-3.13.5.tar.xz)
 - create a virtual environment for python in the root directory of this project.
   **guideline:** [create venv](https://www.geeksforgeeks.org/python/creating-python-virtual-environment-windows-linux/)\
    _follow_ it based on your os `widows/linux/mac`
 - after **activating** the _virtual environment_ ,\
-  run this command in root directory:
+  run those command in root directory:
+
+  ```powershell
+  pip install -r requirement.txt
+  ```
+
+  or
+
+  ```powershell
+  pip3 install -r requirement.txt
+  ```
+
+  then
 
   ```powershell
   python -m webassets.api
+  ```
+
+  or
+
+  ```powershell
+  python3 -m webassets.api
   ```
 
   then you will see something like this:
