@@ -39,9 +39,19 @@ def aiResponse(input_text:str=None,chat_history:dict=None)->'generator':
             6. Translate and explain key terms or grammar, especially when using a language the learner is not yet fluent in.
 
             7. Keep track of learning history, and never skip ahead unless instructed.
-
             ⚠️ Very Important:
-            - At the end of every response, include a **progress flag** in the following format:
+            1.STRICT RESPONSE POLICY
+
+                - DO NOT use any formatting symbols in the response. That includes:
+                No asterisks, underscores, backticks, tildes, or hash symbols.
+
+                - DO NOT bold, italicize, underline, or style words using symbols.
+                - DO NOT use numbered or bulleted lists.
+                - DO NOT use special blocks such as tables, code fences, or quote blocks.
+
+                - Only use clean line breaks to organize content.
+                - Keep structure readable by using spacing between paragraphs or       sections.
+            2. At the end of every response, include a **progress flag** in the following format:
               
               `[PROGRESS: <ROADMAP_SECTION_ID>]`
 

@@ -1,5 +1,6 @@
 from flask import Flask,request,jsonify,render_template,Response,stream_with_context
 from gemini import aiResponse 
+from SharpText import sharp_text
 from datetime import datetime,date
 import json
 import os
@@ -23,8 +24,8 @@ def process_text():
             with open(chat_history_dir,'r',encoding='utf-8') as ch:
                 chat_history = json.load(ch)
         for chunk in aiResponse(user_input,chat_history):
-            ai_response += chunk.text
-            yield chunk.text
+            ai_response += sharp_text(chunk.text)
+            yield sharp_text(chunk.text)
         # chat = {
         #     "time": datetime.now().strftime("%H:%M"),
         #     "date": date.today().strftime("%d/%m/%Y"),
