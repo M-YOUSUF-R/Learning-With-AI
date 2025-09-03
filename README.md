@@ -6,7 +6,7 @@ this an ai based student teacher application to learn something based on a roadm
 
 - to use this application you need to get a `google-gemini` api key.\
   the manual is here : [gemini api key guide](https://ai.google.dev/gemini-api/docs/api-key)
-- put that in `.env` file in the root directory of this project as:\
+- put that in `.env` file in the root directory of this project as:
 
   ```bash
   API_KEY="your gemini api key"
@@ -17,6 +17,7 @@ this an ai based student teacher application to learn something based on a roadm
   ```bash
   asset/.prompt/learning_roadmap.md
   ```
+  (currently given Arabic Language Learning Roadmap)
 - then check if you have `python` in your machine _like:_\
    **type in teminal:**
   ```bash
